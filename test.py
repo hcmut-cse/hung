@@ -17,7 +17,7 @@ KEYWORD = ['Shiper', 'Consignee', 'Notify Party',
             'Owner\'s mark/container NO.',
             'Description', 'G.W(KGS)', 'MEA\'(CMB)',
             'Freight and charges etc.', 'prepaid', 'Collect',
-            'BKG', 'HBL']
+            'As agents', 'BKG', 'HBL']
 
 # KEYWORD FOR VN 101466
 # KEYWORD = ['From','To','Booking No.','Date','Shipper Name & Address',
@@ -34,18 +34,15 @@ if __name__ == '__main__':
         # Reset Current CONFIG
         print('====================',file,'====================')
         CURR_CONFIG = {}
-
         # Load PDF
         with open(PDF_TYPE + '/' + file, "rb") as f:
             pdf = pdftotext.PDF(f)
-
         page=pdf[0].split('\n')
-
         for page in pdf:
             lineList=page.split('\n')
-
         length=len(lineList)
-
+        
+        #find all predefined kw
         kwpos_temp={}
         for key in KEYWORD:
             found=[]
@@ -53,10 +50,8 @@ if __name__ == '__main__':
                 if (lineList[r].find(key)!=-1):
                     found.append([r,lineList[r].find(key)])
             kwpos_temp[key]=found
-
-        
+        #put all kw in a dict
         kwpos={}
-        
         for key in KEYWORD:
             l=len(kwpos_temp[key])
             pos=key.rfind('  ')
@@ -66,44 +61,57 @@ if __name__ == '__main__':
                 for i in range(l): kwpos[newKey+str(i+1)]=kwpos_temp[key][i]
             else:
                 kwpos[newKey]=kwpos_temp[key][0]
-
+        
+        #flex row -> modify CONFIG
         for key in CONFIG:
-            haskey = False
-            for kw in kwpos:
-                if (key == kw):
-                  haskey = True
-            if not haskey:
-                row = CONFIG[key]['row'][1]
-                col = CONFIG[key]['column'][0]
-                found = [row, col]
-                kwpos[key] = found
-       
-        for key in CONFIG:
-            if (CONFIG[key]['isFlex']): 
-                top=CONFIG[key]['endObject']['top']
-                bot=CONFIG[key]['endObject']['bottom']
-                topAndKeywordOnSingleLine=CONFIG[key]['topAndKeywordOnSingleLine']
-                contentSameLineWithKeyword=CONFIG[key]['contentSameLineWithKeyword']
-                toprow=-1
-                botrow=-1
-                minDistance=100000
-                for kw in kwpos:
-                    # print('In the loop key and kw',key,kw)
-                    if (top==kw and abs(kwpos[kw][0]-kwpos[key][0])<minDistance): 
-                        minDistance=abs(kwpos[kw][0]-kwpos[key][0])
-                        toprow=kwpos[kw][0]
-                minDistance=100000
-                for kw in kwpos:
-                    if (bot==kw and abs(kwpos[kw][0]-kwpos[key][0])<minDistance): 
-                        minDistance=abs(kwpos[kw][0]-kwpos[key][0])
-                        botrow=kwpos[kw][0]
-                # print(key)
-                if (top!=-1): 
-                    if (topAndKeywordOnSingleLine): CONFIG[key]['row'][0]=toprow
-                    elif (contentSameLineWithKeyword==0): CONFIG[key]['row'][0]=toprow+CONFIG[key]['row'][0]-kwpos[top][0]
-                    else: CONFIG[key]['row'][0]=toprow+1
-                if (bot!=-1): CONFIG[key]['row'][1]=botrow
-
+            if (key in kwpos):
+                if (CONFIG[key]['isFlex']): 
+                    top=CONFIG[key]['endObject']['top']
+                    bot=CONFIG[key]['endObject']['bottom']
+                    topAndKeywordOnSingleLine=CONFIG[key]['topAndKeywordOnSingleLine']
+                    contentSameLineWithKeyword=CONFIG[key]['contentSameLineWithKeyword']
+                    toprow=-1
+                    botrow=-1
+                    minDistance=100000
+                    for kw in kwpos:
+                        if (top==kw and abs(kwpos[kw][0]-kwpos[key][0])<minDistance): 
+                            minDistance=abs(kwpos[kw][0]-kwpos[key][0])
+                            toprow=kwpos[kw][0]
+                    minDistance=100000
+                    for kw in kwpos:
+                        if (bot==kw and abs(kwpos[kw][0]-kwpos[key][0])<minDistance): 
+                            minDistance=abs(kwpos[kw][0]-kwpos[key][0])
+                            botrow=kwpos[kw][0]
+                    if (top!=-1): 
+                        if (topAndKeywordOnSingleLine): CONFIG[key]['row'][0]=toprow
+                        elif (contentSameLineWithKeyword): CONFIG[key]['row'][0]=toprow+CONFIG[key]['row'][0]-kwpos[top][0]
+                        else: CONFIG[key]['row'][0]=toprow+1
+                    if (bot!=-1): CONFIG[key]['row'][1]=botrow
+            else:
+                if (CONFIG[key]['isFlex']): 
+                    top=CONFIG[key]['endObject']['top']
+                    bot=CONFIG[key]['endObject']['bottom']
+                    topAndKeywordOnSingleLine=CONFIG[key]['topAndKeywordOnSingleLine']
+                    contentSameLineWithKeyword=CONFIG[key]['contentSameLineWithKeyword']
+                    toprow=-1
+                    botrow=-1
+                    minDistance=100000
+                    for kw in kwpos:
+                        if (top==kw and abs(kwpos[kw][0]-CONFIG[key]['row'][0])<minDistance): 
+                            minDistance=abs(kwpos[kw][0]-CONFIG[key]['row'][0])
+                            toprow=kwpos[kw][0]
+                    minDistance=100000
+                    for kw in kwpos:
+                        if (bot==kw and abs(kwpos[kw][0]-CONFIG[key]['row'][0])<minDistance): 
+                            minDistance=abs(kwpos[kw][0]-CONFIG[key]['row'][0])
+                            botrow=kwpos[kw][0]
+                    if (top!=-1): 
+                        if (topAndKeywordOnSingleLine): CONFIG[key]['row'][0]=toprow
+                        elif (contentSameLineWithKeyword): CONFIG[key]['row'][0]=toprow+CONFIG[key]['row'][0]-kwpos[top][0]
+                        else: CONFIG[key]['row'][0]=toprow+1
+                    if (bot!=-1): CONFIG[key]['row'][1]=botrow
+        
+        #get data using modified CONFIG
         data={}
         for key in CONFIG:
             row=CONFIG[key]['row']
@@ -111,21 +119,25 @@ if __name__ == '__main__':
             lines=lineList[row[0]:row[1]]
             data[key]='\n'.join([x[column[0]:column[1]] for x in lines])
 
-        # for key in CONFIG:
-        #     if (CONFIG[key]['hasSubfield']):
-        #         pos=0
-        #         for subfield in CONFIG[key]['subfields']:
-        #             if CONFIG[key]['subfields'][subfield]!=10: 
-        #                 result=re.search(CONFIG[key]['subfields'][subfield],data[key]).span()
-        #                 data[key+'_'+subfield]=data[key][result[0]:result[1]+1]
-        #                 pos=result[1]
-        #             else:
-        #                 data[key+subfield]=data[key][pos:]
-        #         del data[key]
+        #process the subfields
+        for key in CONFIG:
+            if (CONFIG[key]['hasSubfield']):
+                for subs in CONFIG[key]['subfields']:
+                    pos = 0
+                    reg = CONFIG[key]['subfields'][subs]
+                    if (reg != 10):
+                        result = re.search(reg, data[key]).span()
+                        data[key+'_'+subs] = data[key][result[0]:result[1]+1]
+                        pos = result[1]
+                    else:
+                        data[key+'_'+subs] = data[key][pos:]
+                del data[key]
+
+        #print data
         for key in data:
             data_pros=data[key]
             data_pros=data_pros.strip()
             data_pros=re.sub('\n+','\n',data_pros)
             data_pros=re.sub('\n\s+','\n',data_pros)
-            print('lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll')
+            print('llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll')
             print('%s:\n%s' % (key,data_pros))

@@ -197,24 +197,21 @@
         },
         "DATA1": {
             "row": [22, 33],
-            "column": [0, 44],
-            "hasSubfield": 1,
+            "column": [0, 40],
+            "hasSubfield": 0,
             "contentSameLineWithKeyword": 0,
             "topAndKeywordOnSingleLine": 0,
             "isFlex": 1,
             "endObject": {
-                "top": "DATA1",
+                "top": -1,
                 "bottom": "Freight and charges etc.",
                 "left": -1,
                 "right": -1
-            },
-            "subfields": {
-                "f": "[A-Z]{4}[0-9]{7} / VN[0-9]{6}[A-Z] / [0-9]{2}'DC"
             }
         },
         "DATA2": {
             "row": [22, 33],
-            "column": [44, null],
+            "column": [40, null],
             "hasSubfield": 1,
             "contentSameLineWithKeyword": 0,
             "topAndKeywordOnSingleLine": 0,
@@ -226,10 +223,8 @@
                 "right": -1
             },
             "subfields": {
-                "Number": "[0-9]* [A-Z]*",
-                "HS CODE": "HS CODE: [0-9]*, [0,9]*",
-                "NAME": "[^0-9]*",
-                "f": "everything else"
+                "Total": "(\\s)*(TOTAL:)*(\\s)[0-9]*(\\s)*[A-Z]*(\\n)",
+                "Desc": 10
             }
         },
         "Freight and charges etc.": {
@@ -241,7 +236,7 @@
             "isFlex": 1,
             "endObject": {
                 "top": "Freight and charges etc.",
-                "bottom": "BKG",
+                "bottom": "As agents",
                 "left": -1,
                 "right": -1
             }
@@ -255,28 +250,23 @@
             "isFlex": 1,
             "endObject": {
                 "top": "prepaid",
-                "bottom": "BKG",
+                "bottom": "As agents",
                 "left": -1,
                 "right": -1
             }
         },
         "Collect": {
             "row": [34, 37],
-            "column": [64, null],
-            "hasSubfield": 1,
+            "column": [63, null],
+            "hasSubfield": 0,
             "contentSameLineWithKeyword": 0,
             "topAndKeywordOnSingleLine": 0,
             "isFlex": 1,
             "endObject": {
                 "top": "Collect",
-                "bottom": "BKG",
+                "bottom": "As agents",
                 "left": -1,
                 "right": -1
-            },
-            "subfields": {
-                "Kind of B/L": "Kind of B/L",
-                "Freight Payable": "Freight Payable",
-                "Place and date of issue": "Place and date of issue"
             }
         },
         "BKG": {
@@ -288,12 +278,12 @@
             "isFlex": 1,
             "endObject": {
                 "top": "BKG",
-                "bottom": "BKG",
+                "bottom": "HBL ",
                 "left": "BKG",
                 "right": -1
             }
         },
-        "HBL": {
+        "HBL ": {
             "row": [39, 40],
             "column": [7, null],
             "hasSubfield": 0,
@@ -303,7 +293,7 @@
             "endObject": {
                 "top": "BKG",
                 "bottom": -1,
-                "left": "BKG",
+                "left": "HBL ",
                 "right": -1
             }
         }

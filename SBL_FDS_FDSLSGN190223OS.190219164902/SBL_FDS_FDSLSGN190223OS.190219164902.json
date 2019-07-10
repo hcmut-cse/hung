@@ -1,0 +1,18 @@
+{
+        "Info": {
+            "row": [51,104],
+            "column": [0,131],
+            "isFlex": 1,
+            "endObject": {
+                "top": "CONTAINER#",
+                "bottom": -1,
+                "left": -1,
+                "right": -1
+            },
+            "hasSubfield": 1,
+            "subfields": {
+                "CCC": "[A-Z]*[0-9]*(\\s)*[A-Z]*[0-9]*[A-Z]*(\\s)*[0-9]*['H](\\s)(DRY)(\\s)*[A-Z]*[0-9]*(\\s)*[0-9,\\s\\.]*(\\n)",
+                "Actual Shipper": 10
+            }
+        }
+}

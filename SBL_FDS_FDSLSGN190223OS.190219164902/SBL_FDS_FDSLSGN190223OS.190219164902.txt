@@ -1,0 +1,104 @@
+FROM :     Thanh Tam                          TEL : 84 8 38224407                        FAX : 84 8 38224408
+PLEASE ISSUE 1 SET SEAWAY BILL                                                                                 REMARK
+SHIPPER :                 YUSEN LOGISTICS (VIETNAM) CO., LTD. - OCM
+                          RM 701 SAIGON RIVERSIDE
+                          OFFICE CENTER BUILDING, 2A-4A TON
+                          DUC THANG STREET, DISTRICT 1,
+                          HO CHI MINH CITY, VIETNAM
+                          O/B GRAND STARTEX CO., LTD. 19F-3, NO.7, SEC. 3,NEW TAIPEI BLVD., XINZHUANG DIST. NEW
+                          TAIPEI CITY, TAIWAN
+                          O/B THINH DAT GARMENT CO.,LTD.
+                          VAM HAMLET, BEN LUC TOWN,BEN LUC DISTRICT,BEN LUC TOWN, VIETNAM
+CONSIGNEE :               FAMILY DOLLAR SERVICES, LLC
+                          10401 MONROE ROAD
+                          MATTHEWS, NC 28105
+                          ATTN:IMPORT TRANSPORTATION DEPT.
+NOTIFY PARTY :            YLA (Americas) Inc. Origin Cargo Order & Vendor Management
+                          300 LIGHTING WAY, 6TH FLOOR
+                          SECAUCUS, NEW JERSEY 07094
+                          ocm.fdscontainers@us.yusen-logistics.com
+ALSO NOTIFY PARTY :       EXPEDITORS INTERNATIONAL OF WASHINGTON, INC.
+                          3101 YORKMONT RD, SUITE 2400, CHARLOTTE,NC 28208.
+                          ATTN:Brokerage Manager fds-clt@expeditors.com Fax7043290595
+FREIGHT COLLECT
+SERVICE CONTRACT :        NYCB00319
+SHIPPER DECLARED THAT THIS SHIPMENT CONTAINS NO WOOD PACKAGING MATERIAL
+MANUFACTURER NAME: SONG HONG GARMENT CO.,LTD.
+NO.10A1 , TAN LONG VILLAGE , THANH PHU COMMUNE , BEN LUC DISTRICT , LONG AN PROVINCE , VIETNAM.
+MANUFACTURER NAME: THINH DAT GARMENT CO., LTD
+VAM HAMLET , BEN LUC TOWN , BEN LUC DISTRICT , LONG AN PROVINCE, VIET NAM
+VSL / VOY :       ANTWERPEN EXPRESS 030E                                 ORIGIN :              HO CHI MINH CITY
+ETD :             2/23/2019                                              PORT OF DISCHARGE :   SAVANNAH, GA
+ETA :             4/11/2019                                              DESTINATION :         SAVANNAH, GA
+MARKS & NO. :
+STYLE NO.:
+DEPT. NO.:
+MADE IN:
+DC DESTINATION:
+CARTON NO.:____ OF _____
+SELLING UNIT UPC NO.:
+FDS ORDER NO.:
+FDS SKU NO.:
+DESCRIPTION:
+TOTAL MASTER CARTON QTY.____PCS
+INNER-PACK QTY.____PCS
+TOTAL INNER-PACKS:
+NET WT__________LBS
+GROSS WT_______LBS
+MEASURE_________IN
+CUBE____________CFT
+COLOR:
+CONTAINER #          SEAL #                                            CARRIER BOOKING#       CTN            KGS    CBM       QTY
+KKFU1241700          VN6912614                             40' DRY     SGNUD2605600            745      9,316.000  55.670   35,760
+    ACTUAL SHIPPER : THINH DAT GARMENT CO.,LTD.
+                     VAM HAMLET, BEN LUC TOWN, BEN LUC DISTRICT, BEN LUC TOWN, LONG AN PROVINCE, VIETNAM
+       P/O NO.       SKU NO.                   DESCRIPTION                                    CTN            KGS    CBM       QTY
+       58766912      NIL                       SURPLUS YUMMY JUMPSUIT NAVY                     316      5,627.000  31.470   15,168
+                                               FLORAL
+                                               SURPLUS YUMMY JUMPSUIT BLACK
+                                               WHITE (HTS# 6114303054)
+       60359611      NIL                       PP LDS SIDE PANEL SHORT GREY                    429      3,689.000  24.200   20,592
+                                               PP LDS SIDE PANEL SHORT NAVY
+                                               PP LDS SIDE PRINTED PANEL SHORT
+                                               BLACK. (HTS# 6104632030)
+                                                            Actual Shipper Subtotal :          745      9,316.000  55.670   35,760
+SEGU5972175          VN272057A                             40' DRY     SGNUD2605600          1,051      9,028.000  56.700   50,448
+    ACTUAL SHIPPER : THINH DAT GARMENT CO.,LTD.
+                     VAM HAMLET, BEN LUC TOWN, BEN LUC DISTRICT, BEN LUC TOWN, LONG AN PROVINCE, VIETNAM
+       P/O NO.       SKU NO.                   DESCRIPTION                                    CTN            KGS    CBM       QTY
+       60359611      NIL                       PP LDS SIDE PANEL SHORT GREY                  1,051      9,028.000  56.700   50,448
+                                               PP LDS SIDE PANEL SHORT NAVY
+                                               PP LDS SIDE PRINTED PANEL SHORT
+                                               BLACK. (HTS# 6104632030)
+                                                            Actual Shipper Subtotal :        1,051      9,028.000  56.700   50,448
+TLLU5469018          VN313389A                             40H DRY     SGNUD2599400          1,050      8,243.900  65.030   46,338
+    ACTUAL SHIPPER : GRAND STARTEX CO., LTD.
+                     19F-3, NO.7, SEC. 3, NEW TAIPEI BLVD., XINZHUANG DIST. , NEW TAIPEI CITY 242, TAIWAN
+       P/O NO.       SKU NO.                   DESCRIPTION                                    CTN            KGS    CBM       QTY
+       58901287      NIL                       JBLDSBOYFRIENDTANKTURQ                        1,050      8,243.900  65.030   46,338
+                                               BOYFRIENDTANKLAVENDAR
+                                               JBLDSBOYFRIENDTANKWHITE
+                                               JBLADIESBOYFRIENDTANKBLACK
+                                               JBLADIESBOYFRIENDTANKBLUE
+                                               JBPLUSBOYFRIENDTANKYELLOW
+                                               JBPLUSBOYFRIENDTANKBLACK
+                                               JBPLUSBOYFRIENDTANKBLUE
+                                               JBPLUSBOYFRIENDTANKWHITE (HTS#
+                                               6109901065)
+                                                            Actual Shipper Subtotal :        1,050      8,243.900  65.030   46,338
+UETU4091762          VN313343A                             40' DRY     SGNUD2599400            863      7,290.500  55.000   39,372
+    ACTUAL SHIPPER : GRAND STARTEX CO., LTD.
+                     19F-3, NO.7, SEC. 3, NEW TAIPEI BLVD., XINZHUANG DIST. , NEW TAIPEI CITY 242, TAIWAN
+       P/O NO.       SKU NO.                   DESCRIPTION                                    CTN            KGS    CBM       QTY
+       58901287 NIL             JBLDSBOYFRIENDTANKTURQ                863 7,290.500   55.000  39,372
+                                BOYFRIENDTANKLAVENDAR
+                                JBLDSBOYFRIENDTANKWHITE
+                                JBLADIESBOYFRIENDTANKBLACK
+                                JBLADIESBOYFRIENDTANKBLUE
+                                JBPLUSBOYFRIENDTANKYELLOW
+                                JBPLUSBOYFRIENDTANKBLACK
+                                JBPLUSBOYFRIENDTANKBLUE
+                                JBPLUSBOYFRIENDTANKWHITE (HTS#
+                                6109901065)
+                                            Actual Shipper Subtotal : 863 7,290.500   55.000  39,372
+                   3,709 CTN                         33,878.400 KGS         232.400 CBM
